@@ -10,11 +10,10 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task0.V5.Test
         public void ValidCalc()
         {
             DataService ds = new DataService();
+            int[] numsArray = { 8, 9, 4, 1, 2, 3, 4, 5, 6, 7 };
+            int expectedSum = 24;
 
-            int[] numsArray = { 4, 0, 3, 0, 10 };
-            int expectedSum = 14;
             int res = ds.GetSumEvenArrEl(numsArray);
-
             Assert.AreEqual(expectedSum, res);
         }
     }
