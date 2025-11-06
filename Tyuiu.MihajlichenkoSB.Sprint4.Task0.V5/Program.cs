@@ -36,12 +36,10 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task0.V5
             Console.WriteLine("****************************************************************************");
 
             Console.WriteLine("Результатирующий массив");
-            numsArray = ds.GetSumEvenArrEl(numsArray);
 
-            for (int i = 0; i <= numsArray.Length - 1; i++)
-            {
-                Console.WriteLine(numsArray[i] + "\t");
-            }
+            int sumEven = ds.GetSumEvenArrEl(numsArray); 
+            Console.WriteLine("Сумма четных элементов: " + sumEven);
+
             Console.WriteLine();
             Console.ReadKey();
         }

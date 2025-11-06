@@ -12,10 +12,10 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task0.V5.Test
             DataService ds = new DataService();
 
             int[] numsArray = { 4, 0, 3, 0, 10 };
-            int[] res = ds.GetSumEvenArrEl(numsArray);
-            int[] numsWaitValue = { 4, 1, 3, 1, 10 };
+            int expectedSum = 14;
+            int res = ds.GetSumEvenArrEl(numsArray);
 
-            CollectionAssert.AreEqual(numsWaitValue, res);
+            Assert.AreEqual(expectedSum, res);
         }
     }
 }
