@@ -1,4 +1,4 @@
-﻿using Tyuiu.MihajlichenkoSB.Sprint4.Task4.V17.Lib;
+﻿using Tyuiu.MihajlichenkoSB.Sprint4.Task4.V9.Lib;
 namespace Tyuiu.MihajlichenkoSB.Sprint4.Task4.V17
 {
     class Program
@@ -22,45 +22,39 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task4.V17
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         *");
             Console.WriteLine("****************************************************************************");
 
-            Console.WriteLine("Введите количество строк в массиве:");
-            int rows = Convert.ToInt32(Console.ReadLine());
+            int rows = 5;
+            int columns = 5;
+            int[,] array = new int[rows, columns];
 
-            Console.WriteLine("Введите количество строк в массиве:");
-            int columns = Convert.ToInt32(Console.ReadLine());
-
-            int[,] matrix = new int[rows, columns];
-
-            Console.WriteLine("****************************************************************************");
-
+            Console.WriteLine($"Введите {rows * columns} элементов массива в диапазоне от 2 до 7:");
 
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    Console.WriteLine($"Введите {i}, {j} элемент массива: ");
-                    matrix[i, j] = Convert.ToInt32(Console.ReadLine());
-
+                    Console.Write($"Элемент [{i},{j}]: ");
+                    array[i, j] = Convert.ToInt32(Console.ReadLine());
                 }
-                Console.WriteLine();
             }
 
-            Console.WriteLine("\nМассив: ");
-            for (int i = 0;i < rows; i++)
+            Console.WriteLine("\nИсходный массив:");
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0;j < columns; j++)
+                for (int j = 0; j < columns; j++)
                 {
-                    Console.WriteLine($"{matrix[i, j]} \t");
+                    Console.Write($"{array[i, j]}\t");
                 }
                 Console.WriteLine();
             }
+
 
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                               *");
             Console.WriteLine("****************************************************************************");
 
-            int res = ds.Calculate(matrix);
+            int res = ds.Calculate(array);
 
-            Console.WriteLine("кол-во 0-х элементов =" + res);
+            Console.WriteLine($"Сумма четных элементов массива: {res}");
             Console.ReadKey();
         }
     }

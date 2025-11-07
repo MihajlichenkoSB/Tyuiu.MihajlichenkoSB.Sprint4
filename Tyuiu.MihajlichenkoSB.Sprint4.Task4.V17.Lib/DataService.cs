@@ -1,21 +1,26 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint4;
 
-namespace Tyuiu.MihajlichenkoSB.Sprint4.Task4.V17.Lib
+namespace Tyuiu.MihajlichenkoSB.Sprint4.Task4.V9.Lib
 {
-    public class DataService : ISprint4Task4V17
+    public class DataService : ISprint4Task4V9
     {
-        public int Calculate(int[,] matrix)
+        public int Calculate(int[,] array)
         {
-            int columnIndex = 1;
             int sum = 0;
 
-            int rows = matrix.GetLength(0);
-
+            int rows = array.GetLength(0);
+            int columns = array.GetLength(1);
             for (int i = 0; i < rows; i++)
             {
-                sum += matrix[i, columnIndex];
+                for (int j = 0; j < columns; j++)
+                {
+                    if (array[i, j] % 2 == 0)
+                    {
+                        sum += array[i, j];
+                    }
+                }
+           
             }
-
             return sum;
         }
     }
