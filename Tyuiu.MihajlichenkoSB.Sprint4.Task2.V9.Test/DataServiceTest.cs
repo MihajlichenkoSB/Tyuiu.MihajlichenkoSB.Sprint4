@@ -1,7 +1,5 @@
-﻿
-using Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9.Lib;
-
-namespace Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9.Test
+﻿using Tyuiu.MihajlichenkoSB.Sprint4.Task2.V9.Lib;
+namespace Tyuiu.MihajlichenkoSB.Sprint4.Task2.V9.Test
 {
     [TestClass]
     public sealed class DataServiceTest
