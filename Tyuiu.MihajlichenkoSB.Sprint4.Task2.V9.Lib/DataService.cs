@@ -6,16 +6,16 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task2.V9.Lib
     {
         public int Calculate(int[] array)
         {
-            int sumArray = 0;
+            int multiplyArray = 1;
 
-            for (int i = 0; i < array.Length - 1; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] > 10)
+                if (array[i] % 2 == 0)
                 {
-                    sumArray += array[i];
+                    multiplyArray *= array[i];
                 }
             }
-            return sumArray;
+            return multiplyArray;
         }
     }
 }

@@ -23,20 +23,18 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task2.V9
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         *");
             Console.WriteLine("****************************************************************************");
 
-            Console.WriteLine("Введите количество элементов массива:");
-
-            int len = Convert.ToInt32(Console.ReadLine());
+            int len = 14;
 
             int[] numsArray = new int[len];
 
-            for (int i = 0; i <= len; i++)
+            for (int i = 0; i < len; i++)
             {
-                numsArray[i] = rnd.Next(5, 20);
+                numsArray[i] = rnd.Next(1, 8); 
             }
 
             Console.WriteLine("массив: ");
 
-            for (int i = 0; i < len - 1; i++)
+            for (int i = 0; i < len; i++)
             {
                 Console.Write(numsArray[i] + "\t");
             }

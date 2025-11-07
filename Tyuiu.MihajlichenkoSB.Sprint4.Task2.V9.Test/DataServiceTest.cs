@@ -1,4 +1,6 @@
-﻿using Tyuiu.MihajlichenkoSB.Sprint4.Task2.V9.Lib;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Tyuiu.MihajlichenkoSB.Sprint4.Task2.V9.Lib;
+
 namespace Tyuiu.MihajlichenkoSB.Sprint4.Task2.V9.Test
 {
     [TestClass]
@@ -9,10 +11,10 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task2.V9.Test
         {
             DataService ds = new DataService();
 
-            int[] numArray = { 4, 0, 3, 12, 11 };
+            int[] numArray = { 6, 2, 4, 2, 1, 7, 6, 2, 7, 6, 4, 6, 5, 5 };
 
             int res = ds.Calculate(numArray);
-            int wait = 0;
+            int wait = 165888;
 
             Assert.AreEqual(wait, res);
         }
