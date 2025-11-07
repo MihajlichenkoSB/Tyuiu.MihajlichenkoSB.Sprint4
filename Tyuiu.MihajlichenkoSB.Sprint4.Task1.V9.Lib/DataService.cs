@@ -6,16 +6,20 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9.Lib
     {
         public int Calculate(int[] array)
         {
-            int sumArray = 0;
+            // Для произведения начальное значение должно быть 1, а не 0 (чтобы избежать умножения на 0)
+            int multiplyArray = 1;
 
-            for (int i = 0; i < array.Length - 1; i++)
+            // Цикл должен проходить до конца массива (i < array.Length)
+            for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] > 10)
+                // Проверяем, является ли элемент четным
+                if (array[i] % 2 == 0)
                 {
-                    sumArray += array[i];
+                    // Умножаем
+                    multiplyArray *= array[i];
                 }
             }
-            return sumArray;
+            return multiplyArray;
         }
     }
 }

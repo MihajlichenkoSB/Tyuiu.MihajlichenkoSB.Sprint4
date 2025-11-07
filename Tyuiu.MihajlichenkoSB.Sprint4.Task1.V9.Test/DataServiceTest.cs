@@ -1,4 +1,6 @@
-﻿using Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9.Lib;
+﻿
+using Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9.Lib;
+
 namespace Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9.Test
 {
     [TestClass]
@@ -12,7 +14,8 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9.Test
             int[] numArray = { 4, 0, 3, 12, 11 };
 
             int res = ds.Calculate(numArray);
-            int wait = 23;
+            // Ожидаем 0 (произведение 4 * 0 * 12)
+            int wait = 0;
 
             Assert.AreEqual(wait, res);
         }

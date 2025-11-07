@@ -21,7 +21,7 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         *");
             Console.WriteLine("****************************************************************************");
-
+            
             int len;
 
             Console.WriteLine("Введите количество элементов массива:");
@@ -30,24 +30,26 @@ namespace Tyuiu.MihajlichenkoSB.Sprint4.Task1.V9
 
             int[] namsArray = new int[len];
 
-            for (int i = 0; i < len - 1; i++) 
+            // Исправлено: цикл до len, чтобы ввести все элементы
+            for (int i = 0; i < len; i++)
             {
-                Console.WriteLine("Введите значение" + i + "элемента массива: ");
+                Console.WriteLine("Введите значение " + i + " элемента массива: ");
                 namsArray[i] = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine();
             Console.WriteLine("массив: ");
-            for (int i = 0; i < len - 1; i++) 
-            { 
-                Console.WriteLine(namsArray[i] + "\t");
 
+            // Исправлено: цикл до len и вывод в одну строку для красоты
+            for (int i = 0; i < len; i++)
+            {
+                Console.Write(namsArray[i] + "\t");
             }
             Console.WriteLine();
 
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                               *");
             Console.WriteLine("****************************************************************************");
-
+            
             int res = ds.Calculate(namsArray);
 
             Console.WriteLine(res);
